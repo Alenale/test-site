@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset= UTF-8"/>
+        <title>Эксперт</title>
+        <link rel="stylesheet" type="text/css"
+              href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <link rel="stylesheet" th:href="@{/css/style1.css}"
+              href="../../css/style1.css" />
+    </head>
+    <body>
+        <div class="Menu">
+            <ul>
+                <a href="/home"><li class="Expert">Эксперт</li></a>
+                <a href="/home"><li class="Project">О проекте</li></a>
+                <a href="/welcome"><li class="Help">Кабинет</li></a>
+                <a href="/create"><li class="Tests">Тесты</li></a>
+                <a href="/admin"><li class="LogIn">Войти</li></a>
+            </ul>
+        </div>
+        <center>
+            <h1>Добавить вопрос</h1>
+        </center>
+        <hr align="center" width="120px" color="#0a0026"/>
+        <center>
+            <form th:action="@{/addQuestion}" method="POST">
+                <p>Вопрос <input type="text" id="questions" name="questions" /></p>
+                <p>Тест   <input type="text" id="testName" name="testName"/></p>
+                <!--<p>Тест   <input type="text" id="id" name="id"/></p>-->
+                <!--<input type="text" id="f1" name="f1" value="5" th:value="${form.id}" />-->
+                <!--<p>Тест <input type="text" id="testName" name="testName" /></p>-->
+                <input type="submit" value="Создать"/>
+            </form>
+        </center>
+    </body>
+</html>

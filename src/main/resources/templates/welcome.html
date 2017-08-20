@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+    <head>
+        <title>Эксперт</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="/js/test.js"></script>
+        <link rel="stylesheet" type="text/css"
+              href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <link rel="stylesheet" th:href="@{/css/welcome.css}"
+              href="../../css/welcome.css" />
+    </head>
+    <body>
+        <div class="Menu">
+            <ul>
+                <a href="/home"><li class="Expert">Эксперт</li></a>
+                <a href="/form"><li class="Project">О проекте</li></a>
+                <a href="/welcome"><li class="Help">Кабинет</li></a>
+                <a href="/create"><li class="Tests">Тесты</li></a>
+                <a href="/admin"><li class="LogIn">Войти</li></a>
+            </ul>
+        </div>
+        <div class = "User">
+            <p class="actions1">
+                <center>
+                    <form th:action="@{/logout}" method="post">
+                        <input type="submit" value="Выйти"/>
+                    </form>
+                </center>
+            </p>
+        </div>
+        <div class="Pod">
+            <ul class="About">
+                <li >О проекте
+                    <p class="Aboutus">2016 Эксперт - занятный и простой проект для получения информации и статистики по потребительским продуктам и услугам. </p>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

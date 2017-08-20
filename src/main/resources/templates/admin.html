@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <title>Эксперт</title>
+        <link rel="stylesheet" type="text/css"
+              href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <link rel="stylesheet" th:href="@{/css/admin.css}"
+              href="../../css/admin.css" />
+    </head>
+<body>
+    <div class="Menu">
+        <ul>
+            <a href="/home"><li class="Expert">Эксперт</li></a>
+            <a href="/home"><li class="Project">О проекте</li></a>
+            <a href="/home"><li class="Help">Кабинет</li></a>
+            <a href="/create"><li class="Tests">Тесты</li></a>
+            <a href="/admin"><li class="LogIn">Войти</li></a>
+        </ul>
+    </div>
+    <div class = "Admin">
+        <h1>СТРАНИЦА АДМИНИСТРАТОРА</h1>
+        <hr align="center" width="120px" color="#0a0026"/>
+        <center>
+            <a th:href="@{/create}">Создать опрос</a>
+        </center>
+        <center>
+            <p class="actions1">
+            <form th:action="@{/logout}" method="post">
+                <input type="submit" value="Выйти"/>
+            </form>
+            </p>
+        </center>
+    </div>
+    <div class="Pod">
+        <ul class="About">
+            <li >О проекте
+                <p class="Aboutus">2016 Эксперт - занятный и простой проект для получения информации и статистики
+                    по потребительским продуктам и услугам. </p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Эксперт</title>
+        <link rel="stylesheet" type="text/css"
+              href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <link rel="stylesheet" th:href="@{/css/registration.css}"
+              href="../../css/registration.css" />
+    </head>
+    <body>
+        <div class="Menu">
+            <ul>
+                <a href="/home"><li class="Expert">Эксперт</li></a>
+                <a href="/form"><li class="Project">О проекте</li></a>
+                <a href="/welcome"><li class="Help">Кабинет</li></a>
+                <a href="/create"><li class="Tests">Тесты</li></a>
+                <a href="/admin"><li class="LogIn">Войти</li></a>
+            </ul>
+        </div>
+        <form action="#" th:action="@{/registration}" th:object="${registration}" method="post">
+            <h1>Регистрация</h1>
+            <p class="inputs1">
+                <input type="text" th:field="*{firstName}" placeholder="Имя"/>
+                <input type="text" th:field="*{lastName}" placeholder="Фамилия"/>
+                <input type="text" th:field="*{age}" placeholder="Возраст"/>
+                <input type="text" th:field="*{email}" placeholder="Эл.почта"/>
+                <input type="text" th:field="*{password}" placeholder="Пароль"/>
+            </p>
+            <p class="actions1">
+                    <input type="submit" value="СОЗДАТЬ" />
+            </p>
+        </form>
+        <div class="Pod">
+            <ul>
+                <li>О проекте
+                    <p>2016 Эксперт - занятный и простой проект для получения информации и статистики
+                        по потребительским продуктам и услугам. </p>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

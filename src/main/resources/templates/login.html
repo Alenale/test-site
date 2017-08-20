@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset= UTF-8"/>
+        <title>>Эксперт</title>
+        <link rel="stylesheet" type="text/css"
+              href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+        <link rel="stylesheet" th:href="@{/css/main.css}"
+              href="../../css/main.css" />
+    </head>
+    <body>
+        <div class="Menu">
+            <ul>
+                <a href="/home"><li class="Expert">Эксперт</li></a>
+                <a href="/home"><li class="Project">О проекте</li></a>
+                <a href="/welcome"><li class="Help">Кабинет</li></a>
+                <a href="/create"><li class="Tests">Тесты</li></a>
+                <a href="/admin"><li class="LogIn">Войти</li></a>
+            </ul>
+        </div>
+        <div th:if="${param.error}">
+            <h1 style="color:red">Адрес эл.почты или пароль введены не правильно!</h1>
+        </div>
+        <div th:if="${param.logout}">
+        </div>
+        <form th:action="@{/login}" method="post">
+            <h1>Форма входа</h1>
+            <p class="inputs1">
+                <input type="text" name="username" placeholder="Логин"/>
+                <input type="password" name="password" placeholder="Пароль"/>
+            </p>
+            <p class="actions1">
+                <input type="submit" value="ВОЙТИ"/>
+                <p class="f a">
+                    <a href="/registration">Регистрация</a>
+                </p>
+            </p>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,123 @@
+body{
+	margin: 0;
+	background-color: #E0EFFA;
+}
+ul{
+	margin: 0;
+	list-style: none;
+}
+li{
+	display: inline-block;
+}
+.Menu{
+	background-color: #000000;
+	height: 85px;
+}
+
+.Expert{
+	text-align: auto;
+	font-family: Tahoma;
+	padding: 10px;
+	padding-left: 45px;
+	color: white;
+	font-size: 45px;
+	position: relative;
+
+}
+.Project{
+	text-align: auto;
+	font-family: Arial;
+	padding-left: 464px;
+	padding-bottom: 45px;
+	padding-right: 45px;
+	color: white;
+	font-size: 25;
+	position: relative;
+
+}
+.Help{
+	text-align: auto;
+	font-family: Arial;
+	padding: 45px;
+	color: white;
+	font-size: 25;
+	position: relative;
+
+}
+.Tests{
+	text-align: auto;
+	font-family: Arial;
+	padding: 45px;
+	color: white;
+	font-size: 25;
+	position: relative;
+
+}
+ .LogIn{
+	text-align: auto;
+	font-family: Arial;
+	padding: 45px;
+	color: white;
+	font-size: 25;
+	position: relative;
+}
+h1{
+	font-family: sans-serif;
+	font-size: 28px;
+	color: #0a0026;
+	text-align: center;
+}
+form{
+	height: 255px;
+	width: 340px;
+	margin: 100px 480px;
+	padding: 15px;
+	position: relative;
+	background-color: #F5F5F5;
+	  box-shadow:
+        0 0 1px rgba(0, 0, 0, 0.3),
+        0 3px 7px rgba(0, 0, 0, 0.3),
+        inset 0 1px rgba(255,255,255,1),
+        inset 0 -3px 2px rgba(0,0,0,0.25);
+    /*border-radius: 5px;*/
+}
+
+input[type=text], input[type=password]{
+	font-family: sans-serif;
+	font-size: 13px;
+ 	width: 200px;
+    padding: 5px;
+    margin-left: 66px;
+    margin-bottom: 5px;
+   border: none; /* Remove the default border */
+     box-shadow:
+        inset 0 0 5px rgba(0,0,0,0.1),
+        inset 0 3px 2px rgba(0,0,0,0.1);
+    /*border-radius: 3px;*/
+    background: #EBFAF6;
+    color: #777;
+    transition: color 0.3s ease-out;
+}
+input[type=submit]{
+	height: 42px;
+	width: 200px;
+	padding: 0px;
+    margin-left: 67px;
+    margin-bottom: 5px;
+	color: white;
+	background: #0a0026;
+	border-style: solid;
+	border-width: 5px;
+	border-color: black;
+    cursor: pointer;
+     /* Font styles */
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+
+    line-height: 38px; /* Same as height */
+    text-align: center;
+}
+
+.f, .a{
+	text-align: center;
+	color:  #0a0026;
+}

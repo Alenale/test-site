@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;  charset=UTF-8"/>
+        <title>Эксперт</title>
+        <link rel="stylesheet" type="text/css"
+              href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+        <link rel="stylesheet" th:href="@{/css/welcome.css}"
+              href="../../css/welcome.css" />
+    </head>
+    <body>
+        <div class="Menu">
+            <ul>
+                <a href="/home"><li class="Expert">Эксперт</li></a>
+                <a href="/home"><li class="Project">О проекте</li></a>
+                <a href="/welcome"><li class="Help">Кабинет</li></a>
+                <a href="/create"><li class="Tests">Тесты</li></a>
+                <a href="/admin"><li class="LogIn">Войти</li></a>
+            </ul>
+        </div>
+        <center>
+            <form  action="#" th:action="@{/create}" th:object="${create}" method="post">
+                <h1>Параметры опроса</h1>
+                <hr align="center" width="120px" color="#0a0026"/>
+                <p class="inputs1">
+                <p>Название опроса: <input type="text" th:field="*{testName}"/></p>
+                <p>Кол-во вопросов: <input type="text" th:field="*{nquestions}" /></p>
+                <p>Кол-во бонусов:  <input type="text" th:field="*{bonuses}" /></p>
+                </p>
+                <p class="actions1">
+                    <input type="submit" value="СОЗДАТЬ" />
+                </p>
+            </form>
+        </center>
+    </body>
+</html>
