@@ -29,41 +29,4 @@ public class RegistrationController {
         return "result";
     }
 
-
-    //Question
-    /*@RequestMapping(value = "/find-by", method = RequestMethod.GET)
-    public @ResponseBody String getById(@RequestParam("id") long id) {
-        String userName = "";
-        id++;
-        try {
-            User user = repository.findById(id);
-            userName = user.getFirstName();
-        }
-        catch (Exception ex) {
-            return "User not found";
-        }
-        return "The user id is: " + userName;
-    }*/
-
-    /*@RequestMapping(value = "/find-by-name", method = RequestMethod.GET)
-    public @ResponseBody
-    String getByLastName() {
-        String userName = "";
-        List<User> user = repository.findByLastName();
-        while (!user.isEmpty()) {
-            String user.getFirstName();
-
-        }
-        /*try {
-            User user = repository.findByLastName(id);
-            userName = user.getFirstName();
-        }
-        catch (Exception ex) {
-            return "User not found";
-        }
-        return
-    }*/
-
-
-
 }

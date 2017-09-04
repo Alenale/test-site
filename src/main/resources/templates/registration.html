@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
     <head>
+        <meta http-equiv="Content-Type" content="text/html;  charset=UTF-8"/>
         <title>Эксперт</title>
         <link rel="stylesheet" type="text/css"
               href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
@@ -18,7 +19,7 @@
                 <a href="/admin"><li class="LogIn">Войти</li></a>
             </ul>
         </div>
-        <form action="#" th:action="@{/registration}" th:object="${registration}" method="post">
+    <form action="#" th:action="@{/registration}" th:object="${registration}" method="post">
             <h1>Регистрация</h1>
             <p class="inputs1">
                 <input type="text" th:field="*{firstName}" placeholder="Имя"/>
@@ -31,13 +32,5 @@
                     <input type="submit" value="СОЗДАТЬ" />
             </p>
         </form>
-        <div class="Pod">
-            <ul>
-                <li>О проекте
-                    <p>2016 Эксперт - занятный и простой проект для получения информации и статистики
-                        по потребительским продуктам и услугам. </p>
-                </li>
-            </ul>
-        </div>
     </body>
 </html>

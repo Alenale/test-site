@@ -28,13 +28,6 @@ public class FormController {
         return "home";
     }
 
-    /*@RequestMapping(value = "/search")
-    public String search(Model model, @RequestParam String search) {
-        model.addAttribute("qList", questionRepository.findByTestName(search));
-        //model.addAttribute("search", search);
-        return "home";
-    }*/
-
 
     // забирает из бд вопросы в соответствии в id теста
     @RequestMapping(value = "/test", params = "test")
